@@ -4,24 +4,18 @@ public class Principal {
 
     public static void main(String[] args) {
         
-        /*La creacion de dos objetos*/
-        Estudiante estudiante1 = new Estudiante(12, "Margot", "Quilua",8); /*Con datos*/
-        Estudiante estudiante2 = new Estudiante(); /*Sin datos*/
+        Recluso recluso1 = new Recluso();
+        recluso1.setNombre("Ricardo");
+        recluso1.setId_carcel(12345);
         
-        /*El uso de un metodos*/
-        estudiante1.aprobacion(estudiante1.getCalificacion()); /*Se usa el metodo de aprobacion*/
-        System.out.println(estudiante1.getCalificacion()); /*Se usa el getter de calificacion*/
+        System.out.println(recluso1.getNombre());
+        System.out.println(recluso1.getId_carcel());
         
-        /*Se usa el setter para dar informacion al objeto que al principio no tenia informacion*/
-        estudiante2.setCalificacion(1);
-        estudiante2.setNombre("Roberto");
-        estudiante2.aprobacion(estudiante2.getCalificacion()); /*Se usa el metodo de aprobacion*/
-        System.out.println(estudiante2.getCalificacion()); /*Se usa el getter de calificacion*/
+        System.out.println("---------------------");
         
-        /*Se reescribe la informacion del objeto dos, pues estaba "incorrecta" */
-        estudiante2.setCalificacion(10);
-        estudiante2.setNombre("Robert");
-        estudiante2.aprobacion(estudiante2.getCalificacion()); /*Se usa el metodo de aprobacion*/
-        System.out.println(estudiante2.getCalificacion()); /*Se usa el getter de calificacion*/
+        
+        Estudiante estudiante1 = new Estudiante(1111, 4, 23, 12, "Juan", "Altamirano", 8888);
+        System.out.println(estudiante1.getApellido());
+        System.out.println(estudiante1.getId_universidad());
     }
 }

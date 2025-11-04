@@ -1,47 +1,43 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.mycompany.principal;
 
-public class Estudiante {
-    /*Se asignan las variables de la clase*/
-    private int edad;
-    private String nombre;
-    private String apellido;
-    private int calificacion;
+/**
+ *
+ * @author chich
+ */
+public class Estudiante extends Persona {
     
-    /*Crea un objeto vacio*/
-    public Estudiante(){
+    int id_universidad;
+    int tiempo_carrera;
+    int calificacion;
+
+    public Estudiante() {
     }
-    
-    /*Crea un objeto con todos los atributos*/
-    public Estudiante(int edad, String nombre, String apellido, int calificacion) {
-        this.edad = edad;
-        this.nombre = nombre;
-        this.apellido = apellido;
+
+    public Estudiante(int id_universidad, int tiempo_carrera, int calificacion, int edad, String nombre, String apellido, int cedula) {
+        super(edad, nombre, apellido, cedula);
+        this.id_universidad = id_universidad;
+        this.tiempo_carrera = tiempo_carrera;
         this.calificacion = calificacion;
     }
-    
-    /*getters y setters*/
-    public int getEdad() {
-        return edad;
+
+    public int getId_universidad() {
+        return id_universidad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setId_universidad(int id_universidad) {
+        this.id_universidad = id_universidad;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getTiempo_carrera() {
+        return tiempo_carrera;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setTiempo_carrera(int tiempo_carrera) {
+        this.tiempo_carrera = tiempo_carrera;
     }
 
     public int getCalificacion() {
@@ -53,17 +49,5 @@ public class Estudiante {
     }
     
     
-    /*Una acción o metodo*/
-    public void aprobacion(double calificacion){
-        System.out.println("----------------------");
-        System.out.println(nombre);
-        
-        
-        if(calificacion>=7){
-            System.out.println("Aprueba");
-        } else {
-            System.out.println("Desaprueba");
-        }
-        
-    }
+    
 }
